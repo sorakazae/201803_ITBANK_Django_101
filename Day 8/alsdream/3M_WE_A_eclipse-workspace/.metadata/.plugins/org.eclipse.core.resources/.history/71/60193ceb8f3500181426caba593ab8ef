@@ -1,0 +1,17 @@
+from django.shortcuts import render
+from django.views.generic.list import ListView
+from .models import Board
+from django.views.generic.detail import DetailView
+
+# Create your views here.
+ 
+class main(ListView):
+    template_name='fileshare/templates/main.html'
+    paginate_by = 10
+    context_object_name = 'board'
+'''    
+class detail(DetailView):
+    template_name = 'fileshare/templates/detail.html'
+    model = FileBoard
+    context_object_name = 
+'''

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+{%if list%}
+	{% if c=='1' %} 
+		{% for post in list %}
+			<a href="{% url 'detail' post.id %}">{{ post.headline }}</a>
+			<br>
+		{% endfor %}
+	{% endif %}
+	<hr>
+	{% if c=='2'%}
+		{% for post in list %}
+			<a href="{% url 'detail' post.id %}">{{ post.content }}</a>
+			<br>
+		{% endfor %}
+	{% endif %}
+{% endif %}
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- 재 검색을 하기위한 폼 (검색은 GET이 일반적) -->
+<form action = "{% url 'searchQ' %}" method = "GET" >
+	<!-- q라는 변수에 검색어를 입력(저장) -->
+	<input type = "text" name = 'q' value="{{q}}">
+	<input type = "submit" value = "검색"> <!-- 클릭시 웹서버로 해당 값들을 전송 -->
+</form>
+<!-- list 객체가 있는지 확인 -->
+{% if list %}
+	<!-- list객체를 for~in문으로 검색된 객체들을 하나씩 꺼냄 -->
+	{% for question in list %}
+		<a href="{% url 'detail' question.id %}">{{ question.question_text }}</a>
+		<br>
+	{% endfor %}
+{% endif %}
+
+</body>
+</html>

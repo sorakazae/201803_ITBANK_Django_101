@@ -1,0 +1,5 @@
+eclipse.preferences.version=1
+encoding//src/polls/templates/detail.html=UTF-8
+encoding//src/polls/templates/index.html=UTF-8
+encoding//src/polls/templates/results.html=EUC-KR
+encoding//src/polls/tests.py=UTF-8

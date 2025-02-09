@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<table>
+		<tr> <th> {{post.headline}} / {{post.pub_date}} </th> </tr>
+			{% for image in post.image_set.all %}
+			<tr>
+				<td>
+					<img src="{{image.image.url}}"height="60%"width="60%">
+				</td>
+			</tr>
+			{% endfor %}
+		<tr> <td> <p> {{post.content}} </p> </td> </tr>
+	</table>
+	{% if user.is_authenticated %}
+		{% if user.username == post.author.username %}
+			<a href="{% url 'blog:updateposting' post.id %}">글 수정하기</a>
+		{%endif%}
+	{%endif%}
+	<!-- 댓글 보여주기 -->
+	<ul>
+	{% for co in post.comment_set.all %}
+			<li> {{co.comment}} </li>
+	{% endfor %}
+	</ul>
+	<!-- 댓글 입력 -->
+	<form action="{% url 'blog:commentwrite' %}" method="post">
+		{% csrf_token %}
+		<input type="hidden" name="postid" value="{{post.id}}">
+		{{ form.as_p }}
+		<input type="submit" value="댓글 쓰기">
+	</form>
+</body>
+</html>

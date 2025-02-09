@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<table>
+			<tr> <th> 글 제목 : {{board.headline}} / 게시일 : {{board.pub_date}} </th> </tr>
+				
+			<tr> <td> <p> {{board.content}} </p> </td> </tr>
+			
+			{% csrf_token %}
+			{% if 
+	</table>
+
+</body>
+</html>

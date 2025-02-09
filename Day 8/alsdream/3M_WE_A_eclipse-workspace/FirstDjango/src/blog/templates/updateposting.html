@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action=""method="POST">
+		{%csrf_token%}
+		<table>
+			{{ form.as_table }}
+		</table>
+		<input type="submit"value="글 수정하기"/>
+	</form>
+</body>
+</html>

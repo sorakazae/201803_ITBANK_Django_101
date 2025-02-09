@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+{% if page_obj.has_previous %}
+	<a href="?page={{page_obj.previous_page_number}}">이전 페이지</a>	<!-- ?는 GET방식 -->
+{% endif %}
+{% if page_obj.has_next %}
+	<a href="?page={{page_obj.next_page_number}}">다음 페이지</a>
+{% endif %}
+<table style="width:100%">
+	<tr>
+		<th>
+			글번호
+		</th>
+		<th>
+			글종류
+		</th>
+		<th>
+			제목
+		</th>
+		<th>
+			작성자
+		</th>
+		<th>
+			작성일
+		</th>
+	</tr>
+	{% for obj in board %}
+		<tr>
+			<td>
+				{{obj.id}}
+			</td>
+			<td>
+				{{obj.type.name}}
+			</td>
+			<td>
+				<a href = "{%url 'main' obj.id %}">{{obj.headline}}</a>
+			</td>
+			<td>
+				{{obj.author.username}}
+			</td>
+			<td>
+				{{obj.pub_date}}
+			</td>
+		</tr>
+	{% endfor %}
+	<a href = "{% url 'write' %}">게시물 작성</a>
+</table>
+</body>
+</html>

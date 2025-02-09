@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1> {{question.question_text}} </h1><!-- 질문자 제목 표시  -->
+	{% if error_message %} <!-- 만약 에러가 났을 경우 -->
+		<!-- <p> 문단 처리 <strong></strong> 영역을 굵은 글씨로 -->
+		<p><strong>{{error_message}}</strong></p> 
+	{% endif %}
+	<!-- question_id = 5 action = "polls/5/vote/" -->
+	<!-- <form> </form> 사용자가 입력한 정보를 서버에 줄 수 있는 꾸러미 -->
+	<form action = "{%url 'vote' question.id %}" method = "POST">
+		<!-- token = form 제출시 반드시 필요한 것 폼 변조 방지 -->
+		{% csrf_token %}
+		<!-- question 글에 붙은 choice 객체들을 전부 가져옴 -->
+		{% for choice in question.choice_set.all %}
+			<input type = "radio" name="choice" id="choice{{forloop.counter}}" value="{{choice.id}}"/>
+			<label for = "choice{{forloop.counter}}">{{choice.choice_text}}</label>
+			<!-- <br> 한줄 엔터 -->
+			<br/>
+		{%endfor%}
+		<!-- '투표' 버튼이 생김 -->
+		<input type = "submit" value = "투표"/> 
+	</form>
+</body>
+</html>

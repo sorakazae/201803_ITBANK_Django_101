@@ -1,0 +1,14 @@
+MODULES_MANAGER_V2
+Final_MyApp.__init__|D:\3M_WE_A_eclipse-workspace\Final_MyApp\src\Final_MyApp\__init__.py
+Final_MyApp.settings|D:\3M_WE_A_eclipse-workspace\Final_MyApp\src\Final_MyApp\settings.py
+Final_MyApp.urls|D:\3M_WE_A_eclipse-workspace\Final_MyApp\src\Final_MyApp\urls.py
+Final_MyApp.wsgi|D:\3M_WE_A_eclipse-workspace\Final_MyApp\src\Final_MyApp\wsgi.py
+fileshare.__init__|D:\3M_WE_A_eclipse-workspace\Final_MyApp\src\fileshare\__init__.py
+fileshare.admin|D:\3M_WE_A_eclipse-workspace\Final_MyApp\src\fileshare\admin.py
+fileshare.apps|D:\3M_WE_A_eclipse-workspace\Final_MyApp\src\fileshare\apps.py
+fileshare.migrations.0001_initial|D:\3M_WE_A_eclipse-workspace\Final_MyApp\src\fileshare\migrations\0001_initial.py
+fileshare.migrations.__init__|D:\3M_WE_A_eclipse-workspace\Final_MyApp\src\fileshare\migrations\__init__.py
+fileshare.models|D:\3M_WE_A_eclipse-workspace\Final_MyApp\src\fileshare\models.py
+fileshare.tests|D:\3M_WE_A_eclipse-workspace\Final_MyApp\src\fileshare\tests.py
+fileshare.views|D:\3M_WE_A_eclipse-workspace\Final_MyApp\src\fileshare\views.py
+manage|D:\3M_WE_A_eclipse-workspace\Final_MyApp\src\manage.py

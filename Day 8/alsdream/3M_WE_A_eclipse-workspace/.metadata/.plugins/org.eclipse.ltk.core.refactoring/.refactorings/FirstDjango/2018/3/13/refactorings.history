@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;FirstDjango/src/blog/templates/searchC.html&apos; to &apos;search.html&apos;" description="Rename resource &apos;searchC.html&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/blog/templates/searchC.html" name="search.html" stamp="1522483239144" updateReferences="true"/>
+</session>

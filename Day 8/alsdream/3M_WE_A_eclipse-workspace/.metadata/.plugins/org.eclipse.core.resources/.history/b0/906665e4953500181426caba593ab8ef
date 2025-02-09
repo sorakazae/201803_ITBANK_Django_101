@@ -1,0 +1,44 @@
+from django.shortcuts import render
+from django.views.generic.list import ListView
+from .models import Board, File, Boardtype
+from django.views.generic.detail import DetailView
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.views.generic.edit import CreateView, UpdateView
+from django.http.response import HttpResponseRedirect
+from django.urls.base import reverse, reverse_lazy
+
+# Create your views here.
+ 
+class main(ListView):
+    template_name='fileshare/templates/main.html'
+    model = Board
+    paginate_by = 10
+    context_object_name = 'board'
+
+class detail(DetailView):
+    template_name = 'fileshare/templates/detail.html'
+    model = Board
+    context_object_name = 'board'
+    
+class write(LoginRequiredMixin,CreateView):
+    model = Board
+    fields=['type','headline','content',]
+    template_name = 'fileshare/templates/write.html'
+    def form_valid(self,form):
+        obj = form.save(commit=False)
+        obj.author = self.request.user
+        obj.save()
+        if Boardtype.name == "유료"|"무료":
+            for f in self.request.FILES.getlist('files'):
+                files = File(board=obj,files=f)
+                files.save()
+        return HttpResponseRedirect(reverse('main',args=(obj.id)))
+    
+class updateWrite(LoginRequiredMixin, UpdateView):
+    model = Board
+    fields = ['type','headline','content',]
+    template_name = 'fileshare/templates/updatewrite.html'
+    success_url = reverse_lazy('main')
+    
+
+#class commentWrite(LoginRequiredMixin):

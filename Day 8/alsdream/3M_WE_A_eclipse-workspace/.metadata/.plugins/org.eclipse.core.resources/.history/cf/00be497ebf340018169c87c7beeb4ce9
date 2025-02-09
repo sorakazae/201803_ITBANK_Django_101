@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+{%if list%}
+	{% for post in list %}
+		<a href="{% url 'detail' post.headline %}">{{ post.headline }}</a>
+		<br>
+	{% endfor %}
+	<hr>
+	{% for post in list %}
+		<a href="{% url 'detail' post.content %}">{{ post.content }}</a>
+		<br>
+	{% endfor %}
+{% endif %}
+</body>
+</html>

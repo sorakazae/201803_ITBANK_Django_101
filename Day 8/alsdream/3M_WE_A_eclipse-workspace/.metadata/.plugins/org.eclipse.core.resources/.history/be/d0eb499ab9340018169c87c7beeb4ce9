@@ -1,0 +1,16 @@
+eclipse.preferences.version=1
+encoding//src/blog/templates/detail.html=UTF-8
+encoding//src/blog/templates/index.html=UTF-8
+encoding//src/blog/templates/posting.html=UTF-8
+encoding//src/blog/templates/searchC.html=UTF-8
+encoding//src/blog/templates/updateposting.html=UTF-8
+encoding//src/polls/templates/detail.html=UTF-8
+encoding//src/polls/templates/index.html=UTF-8
+encoding//src/polls/templates/registerc.html=UTF-8
+encoding//src/polls/templates/registerq.html=UTF-8
+encoding//src/polls/templates/results.html=UTF-8
+encoding//src/polls/templates/searchC.html=UTF-8
+encoding//src/polls/templates/searchQ.html=UTF-8
+encoding//src/polls/tests.py=UTF-8
+encoding//src/registration/login.html=UTF-8
+encoding//src/registration/sign.html=UTF-8

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<table>
+			<tr> <th> 글 제목 : {{board.headline}} / 게시일 : {{board.pub_date}} </th> </tr>
+			{% if board.author %}
+				게시자 : {{ board.author.username }}
+			{% endif %}
+			
+			{% if board.type.name == '무료' %}
+				<a href = "{{ File.files }}" download>다운받기</a>
+			{% endif %}
+			
+			
+			{% if board.type.name == '유료' %}
+				<a href = "{% url 'buy' %}">결제하기</a>
+			{% endif %}
+			
+			<tr> <td> <p> {{board.content}} </p> </td> </tr>
+	</table>
+
+</body>
+</html>

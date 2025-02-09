@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	{%if error_log %}
+		<p>{{error_log}}</p>
+	{% endif %}
+	<form action = "" method = "POST">
+		{% csrf_token %}
+		{{ form.as_p }}	<!-- <p> 에다가 form에 있는 데이터를 삽입 .as_table 테이블형태로 데이터 삽입 -->
+		<input type="submit" value="로그인">
+	</form>
+	<a href="{% url 'social:begin' 'google-oauth2'%}">Login with Google</a>
+</body>
+</html>

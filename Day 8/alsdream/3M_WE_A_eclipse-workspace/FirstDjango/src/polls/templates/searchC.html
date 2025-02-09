@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+{% if list %}
+	{% for q in list %}
+		<a href="{% url 'detail' q.id %}">{{ q.question_text }}</a>
+	{% endfor %}
+{% endif %}
+
+</body>
+</html>
