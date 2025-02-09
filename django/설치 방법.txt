@@ -1,0 +1,9 @@
+1. 가상환경 설치 : python -m venv 가상환경
+1-2 : 가상환경 실행 ( 활성화 )
+2. 프로젝트 생성 : django-admin startproject Blog
+3. 프로젝트 등록(DB등록) : manage.py migrate
+4. 관리자 계정 생성 : manage.py createsuperuser
+5. 프로젝트 실행(runserver) : manage.py runserver
+6. url 패턴 등록
+7. 함수 생성
+8. web 접속 후 콘솔 확인

@@ -1,0 +1,41 @@
+<html>
+<head>
+<style>
+	h1 { color:blue }
+	.p_pont{font-size:20pt; color:red;}
+</style>
+
+<script>
+	function checkForm(id,pwd){
+		if(id.value=='1' && pwd.value=='1'){
+	window.open().location.href='https://www.naver.com/'
+		}
+	}
+</script>
+</head>
+<body>
+    <form onclick="checkForm(id,pwd)">
+	<input type='text' name='id' size='13' placeholder='아이디'>
+	<input type='submit' style='width:60px;height:55px'>
+	<input type='password' name='pwd' size='13' placeholder='비밀번호'>
+    </form>
+
+
+    <form>
+	<input type="text" placeholder="아이디"><br>
+	<input type="text" value="aaaa"><br>
+	<input type="password" value="aaaa"><br>
+	<input type="submit" value="서브밋"><br>
+	<input type="button" value="버튼"><br>
+	<input type="reset" value="리셋"><br>
+     </form>
+     <textarea rows='4' cols='30'></textarea>
+	<h1 style='color:red'>인라인</h1>
+	<p class='p_pont'>날씨가 좋네요</p>
+	<h1>즐거운 주말 입니다</h1>
+</body>
+</html>
+
+
+
+

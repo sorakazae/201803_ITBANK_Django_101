@@ -1,0 +1,36 @@
+﻿<html>
+     <head>
+	<title>TEST</title>
+	<script>
+	function checkForm(id,pass){
+		if(id.value == '1' && pass.value == '1'){
+     			window.open().location.href='회사소개.html';
+		}
+	}
+	</script>
+    </head>
+    <body background = "test.jpg">
+	<form align = "center">
+	검색<input style=" width:500px; height:30px;" type = "text" name="search">
+	</form>
+	<hr>
+	<form onclick="checkForm(id,pass)">
+	<table align = "right">
+	    <tr>
+		<td>
+		<input type="text" name="id" size="13" maxlength="12"
+		 placeholder="아이디">
+		</td>
+	        <td rowspan="2">
+		<input type="submit" value="로그인" style="width:60px; height:55px;">
+	        </td>
+	    </tr>
+	    <tr>
+		<td >
+		<input type="password" name="pass" size="13"maxlength="12"
+		 placeholder="비밀번호">
+	    	</td >
+	    </tr>
+	</table ></form>
+</body>
+</html>
